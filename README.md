@@ -1,5 +1,5 @@
 <div align = "center">
-  <img src="https://www.alura.com.br/assets/img/home/alura-logo.1647533643.svg" width=50px>
+  <img src="https://hermes.digitalinnovation.one/assets/diome/logo.svg" width=150px>
   <h1> Basecamp Javascript </h1>
   <h3> Kitten API </h3>
   </div>
