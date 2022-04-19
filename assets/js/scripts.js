@@ -1,19 +1,21 @@
 const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
-const catBtn = document.getElementById('miau');
 
 const getCats = async () => {
+	try {
 		const data = await fetch(BASE_URL);
-		then(res => res.jason())
-		.catch(e => console.log(e))
-		
-		return data.webpurl;
+		const json = await data.json();
+		return json.webpurl;
+	} catch (e) {
+		console.log(e.message);
+	}
 };
 
 const loadImg = async () => {
-	const catImg = document.getElementsById('cat');
+	const img = document.getElementsByTagName('img')[0];
 	img.src = await getCats();
 };
 
-catBtn.addEventListener('click', loadImg);
-
 loadImg();
+
+const btn = document.getElementById('change-cat');
+btn.addEventListener('click', loadImg);
